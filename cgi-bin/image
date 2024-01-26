@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo "Content-Type: multipart/x-mixed-replace;boundary=ffmpeg"
+echo "Content-Type: image/jpeg"
 echo "Cache-Control: no-cache"
-echo "Query: $QUERY_STRING"
-echo ""
-ffmpeg  -i "$QUERY_STRING" -r 1 -c:v mjpeg -q:v 1 -f mpjpeg -an -
+ffmpeg -i "$QUERY_STRING" -vframes 1 -f image2pipe -an -
