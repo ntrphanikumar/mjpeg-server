@@ -2,5 +2,6 @@
 
 echo "Content-Type: image/jpeg"
 echo "Cache-Control: no-cache"
+echo ""
 ffmpeg -i "$QUERY_STRING" -vframes 1 -f image2pipe -an -
 
