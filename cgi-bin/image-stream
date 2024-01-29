@@ -3,4 +3,4 @@
 echo "Content-Type: multipart/x-mixed-replace;boundary=ffmpeg"
 echo "Cache-Control: no-cache"
 echo ""
-ffmpeg  -i "$QUERY_STRING" -r 5 -c:v mjpeg -q:v 1 -vf scale=-2:360 -f mpjpeg -an -
+ffmpeg  -i "$QUERY_STRING" -r 2 -c:v mjpeg -q:v 1 -vf scale=-2:360 -f mpjpeg -an -
